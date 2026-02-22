@@ -42,7 +42,4 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-/**
- * The default form of the InputOTP field.
- */
 export const Default: Story = {};

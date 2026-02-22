@@ -6,18 +6,24 @@ import { Input } from '../../components/input';
 import { Button } from '../../components/button';
 import Link from 'next/link';
 import { useState } from 'react';
+import { useRouter } from "next/navigation"
 
 export default function Login() {
   const [formValues, setFormValues] = useState({
     login: '',
     password: '',
   });
+  const router = useRouter();
   const handleLoginChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormValues({ ...formValues, login: e.target.value });
   };
 
   const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormValues({ ...formValues, password: e.target.value });
+  };
+
+  const handleSubmit = () => {
+    router.push('/dashboard');
   };
 
   return (
@@ -38,7 +44,7 @@ export default function Login() {
           description="Saisissez vos identifiants pour vous connecter"
           overlayColor="#FFC7C7"
         >
-          <form>
+          <form onSubmit={handleSubmit} action="/dashboard">
             <div className="mt-7 mb-4">
               <label
                 htmlFor="Identifiant"
@@ -78,7 +84,7 @@ export default function Login() {
               </Link>
             </div>
 
-            <Button>
+            <Button className="h-14">
               {<span className="font-bold">{'Se connecter'}</span>}
             </Button>
           </form>
