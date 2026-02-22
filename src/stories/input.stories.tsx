@@ -2,10 +2,10 @@ import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import { Input } from '@/app/components/input';
 
 /**
- * Displays a form input field or a component that looks like an input field.
+ * Affiche un champ de formulaire ou un composant qui ressemble à un champ de formulaire.
  */
 const meta = {
-  title: 'ui/Input',
+  title: 'Composants/Composants de base/Input',
   component: Input,
   tags: ['autodocs'],
   argTypes: {},
@@ -25,7 +25,4 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-/**
- * The default form of the input field.
- */
 export const Default: Story = {};
