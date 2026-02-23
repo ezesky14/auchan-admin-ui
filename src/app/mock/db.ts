@@ -27,6 +27,41 @@ export const stores: Store[] = [
         id: 'MOO5',
         name: 'Angre Djibi 5',
         location: 'Abidjan, Port-Bouet'
+    },
+    {
+        id: 'MOO6',
+        name: 'Angre Djibi 6',
+        location: 'Abidjan, Abobo'
+    },
+    {
+        id: 'MOO7',
+        name: 'Angre Djibi 7',
+        location: 'Abidjan, Yopougon'
+    },
+    {
+        id: 'MOO8',
+        name: 'Angre Djibi 8',
+        location: 'Abidjan, Plateau'
+    },
+    {
+        id: 'MOO9',
+        name: 'Angre Djibi 9',
+        location: 'Abidjan, Marcory'
+    },
+    {
+        id: 'MOO10',
+        name: 'Angre Djibi 10',
+        location: 'Abidjan, Port-Bouet'
+    },
+    {
+        id: 'MOO11',
+        name: 'Angre Djibi 11',
+        location: 'Abidjan, Abobo'
+    },
+    {
+        id: 'MOO12',
+        name: 'Angre Djibi 12',
+        location: 'Abidjan, Yopougon'
     }
 ]
 

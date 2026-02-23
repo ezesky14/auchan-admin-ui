@@ -1,10 +1,10 @@
 'use client';
 import { cva, type VariantProps } from 'class-variance-authority';
 
-const buttonVariants = cva(' flex items-center justify-center rounded-full cursor-pointer', {
+const buttonVariants = cva('flex items-center justify-center rounded-full cursor-pointer', {
   variants: {
     variant: {
-      default: 'px-4 py-2 text-white bg-primary w-full',
+      default: 'text-white bg-primary',
       link: 'text-primary text-xs',
       ghost: 'text-primary px-2 py-2',
       outline: 'text-primary bg-transparent px-2 py-2 border border-primary border-2 font-medium',

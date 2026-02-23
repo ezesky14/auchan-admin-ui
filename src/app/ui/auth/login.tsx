@@ -84,7 +84,7 @@ export default function Login() {
               </Link>
             </div>
 
-            <Button className="h-14">
+            <Button className="h-14 w-full">
               {<span className="font-bold">{'Se connecter'}</span>}
             </Button>
           </form>

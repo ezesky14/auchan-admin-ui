@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const navItems = [
     { label: 'Tableau de bord', href: '/dashboard' },
-    { label: 'Magasins', href: '/magasins' },
+    { label: 'Magasins', href: '/stores' },
     { label: 'Transactions', href: '/transactions' },
     { label: 'Clients', href: '/clients' },
     { label: 'Gestions', href: '/gestions' },
@@ -71,7 +71,7 @@ export default function HeaderMenu() {
                             style={{ transitionDelay: mobileOpen ? `${index * 50}ms` : '0ms' }}
                             onClick={() => setMobileOpen(false)}
                         >
-                            {item.label}
+                            <Link href={item.href}>{item.label}</Link>
                         </li>
                     ))}
                 </ul>

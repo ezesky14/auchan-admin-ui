@@ -82,7 +82,7 @@
   --color-pink-custom: #FFC4CB;
   --color-pink-custom-2: #FFE6E8;
   --color-foreground-secondary: #444444;
-
+  --color-input-foreground:  #E6E6E6;
   --font-sans: 'SanaSans', ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 
@@ -104,6 +104,7 @@
   --ring: #e30613;
   --pink-custom: var(--color-pink-custom);
   --pink-custom-2: var(--color-pink-custom-2);
+  --input-foreground: var(--color-input-foreground);
   --foreground-secondary: var(--color-foreground-secondary);
 }
 
