@@ -29,9 +29,9 @@ export default function StoreList({ stores }: Props) {
 
   return (
     <div>
-      <div className="mt-6 flex flex-wrap gap-6 lg:justify-between">
+      <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {paginatedStores.map((store) => (
-          <StoreItem key={store.id} store={store} />
+          <StoreItem key={store.id} store={store} className="w-full" />
         ))}
       </div>
 

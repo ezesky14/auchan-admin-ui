@@ -62,7 +62,7 @@ export function Dropdown({
 
       {open && (
         <ul
-          className={`absolute ${bgClassName} border-border right-0 z-10 mt-1 min-w-[170px] overflow-hidden rounded-xl border py-1 shadow-lg`}
+          className={`absolute ${bgClassName} border-border right-0 z-50 mt-1 min-w-[170px] overflow-hidden rounded-xl border py-1 shadow-lg`}
         >
           {options.map((option) => (
             <li key={option.value}>
