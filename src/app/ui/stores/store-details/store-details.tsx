@@ -7,8 +7,10 @@ import DonutChart, {
 import { Store } from '@/app/types/store';
 import { ArrowLeftIcon } from '@phosphor-icons/react';
 import StoreTransactions from './store-transactions';
+import { useRouter } from 'next/navigation';
 
 export default function StoreDetails({ store }: { store: Store }) {
+  const router = useRouter();
   const segments: DonutSegment[] = useMemo(() => {
     const rendu = store.transactions.filter(
       (t) => t.type === 'Rendu monnaie',
@@ -22,10 +24,17 @@ export default function StoreDetails({ store }: { store: Store }) {
     ];
   }, [store.transactions]);
 
+  const goBack = () => {
+    router.back();
+  };
+
   return (
     <div>
       <div className="flex items-center gap-2 py-4">
-        <div className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-gray-300 px-0">
+        <div
+          className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border-2 border-gray-300 px-0"
+          onClick={goBack}
+        >
           <ArrowLeftIcon
             className="text-gray-400"
             color="currentColor"
