@@ -113,7 +113,11 @@ export const ForgotPassword = () => {
                   />
                 </div>
 
-                <Button type="button" onClick={handleContinueToOtp} className="h-14 w-full">
+                <Button
+                  type="button"
+                  onClick={handleContinueToOtp}
+                  className="h-14 w-full"
+                >
                   {<span className="font-bold">{'Continuer'}</span>}
                 </Button>
               </div>
@@ -148,7 +152,11 @@ export const ForgotPassword = () => {
                   </Button>
                 </span>
 
-                <Button type="button" onClick={handleContinueToNewPassword} className="h-14 w-full">
+                <Button
+                  type="button"
+                  onClick={handleContinueToNewPassword}
+                  className="h-14 w-full"
+                >
                   {<span className="font-bold">{'Valider'}</span>}
                 </Button>
               </div>
@@ -183,7 +191,11 @@ export const ForgotPassword = () => {
                     id="confirmPassword"
                   />
                 </div>
-                <Button type="button" onClick={handleFinishChangePassword} className="h-14 w-full">
+                <Button
+                  type="button"
+                  onClick={handleFinishChangePassword}
+                  className="h-14 w-full"
+                >
                   {<span className="font-bold">{'Valider'}</span>}
                 </Button>
               </div>

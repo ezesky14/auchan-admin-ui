@@ -81,7 +81,7 @@ function DataTable<TData, TValue>({
     <div className={cn('w-full', className)}>
       <div className="overflow-x-auto">
         <table className="w-full text-left text-sm">
-          <thead className=" bg-muted text-xs font-medium text-muted-foreground">
+          <thead className="bg-muted text-muted-foreground text-xs font-medium">
             {table.getHeaderGroups().map((headerGroup) => (
               <tr key={headerGroup.id}>
                 {headerGroup.headers.map((header) => (
@@ -101,13 +101,13 @@ function DataTable<TData, TValue>({
               </tr>
             ))}
           </thead>
-          <tbody className="divide-y divide-border">
+          <tbody className="divide-border divide-y">
             {table.getRowModel().rows.length ? (
               table.getRowModel().rows.map((row) => (
                 <tr
                   key={row.id}
                   data-state={row.getIsSelected() ? 'selected' : undefined}
-                  className="transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+                  className="hover:bg-muted/50 data-[state=selected]:bg-muted transition-colors"
                 >
                   {row.getVisibleCells().map((cell) => (
                     <td key={cell.id} className="px-6 py-3 whitespace-nowrap">
@@ -123,7 +123,7 @@ function DataTable<TData, TValue>({
               <tr>
                 <td
                   colSpan={columns.length}
-                  className="px-6 py-8 text-center text-muted-foreground"
+                  className="text-muted-foreground px-6 py-8 text-center"
                 >
                   Aucun résultat.
                 </td>

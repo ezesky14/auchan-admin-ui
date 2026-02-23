@@ -1,7 +1,11 @@
 'use client';
 
 import type { Column } from '@tanstack/react-table';
-import { ArrowUpIcon, ArrowDownIcon, ArrowsDownUpIcon } from '@phosphor-icons/react';
+import {
+  ArrowUpIcon,
+  ArrowDownIcon,
+  ArrowsDownUpIcon,
+} from '@phosphor-icons/react';
 import { cn } from '@/lib/utils';
 
 interface DataTableColumnHeaderProps<TData, TValue> {
@@ -24,7 +28,7 @@ function DataTableColumnHeader<TData, TValue>({
   return (
     <button
       className={cn(
-        'inline-flex cursor-pointer items-center gap-1 transition-colors hover:text-foreground',
+        'hover:text-foreground inline-flex cursor-pointer items-center gap-1 transition-colors',
         className,
       )}
       onClick={() => column.toggleSorting(sorted === 'asc')}
