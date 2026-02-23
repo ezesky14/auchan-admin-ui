@@ -1,0 +1,7 @@
+.card {
+  @apply rounded-3xl bg-white p-6;
+}
+
+.card-no-padding {
+  @apply rounded-3xl bg-white p-0;
+}

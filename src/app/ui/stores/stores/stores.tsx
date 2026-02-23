@@ -21,7 +21,7 @@ export default function Stores() {
   const [commune, setCommune] = useState<string>('');
 
   return (
-    <div>
+    <div className="py-6">
       <div className="relative z-10 flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-7">
         <h1 className="text-3xl font-bold">{'Magasins'}</h1>
         <InputSearch

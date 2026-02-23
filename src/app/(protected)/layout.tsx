@@ -8,7 +8,8 @@ export default function DashboardLayout({
   return (
     <div className="min-h-screen min-w-screen bg-gray-100 p-10">
       <HeaderMenu />
-      <div className="py-6">{children}</div>
+
+      {children}
     </div>
   );
 }

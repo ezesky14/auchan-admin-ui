@@ -81,7 +81,7 @@ function DataTable<TData, TValue>({
     <div className={cn('w-full', className)}>
       <div className="overflow-x-auto">
         <table className="w-full text-left text-sm">
-          <thead className="bg-muted text-muted-foreground text-xs font-medium">
+          <thead className="bg-input-foreground text-muted-foreground text-xs font-medium">
             {table.getHeaderGroups().map((headerGroup) => (
               <tr key={headerGroup.id}>
                 {headerGroup.headers.map((header) => (

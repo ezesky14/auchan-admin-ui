@@ -1,66 +1,200 @@
 import { Store } from '../types/store';
 import { Transaction } from '../types/transaction';
 
+const makeTransactions = (
+  count: number,
+  startId: number,
+): Store['transactions'] =>
+  Array.from({ length: count }, (_, i) => ({
+    id: String(10836745693 + startId + i),
+    type: i % 3 === 0 ? 'Rendu monnaie' : 'Paiement course',
+    amount: [1500, 2500, 3000, 1800, 4200, 2000, 3500, 2800, 1200, 5000][
+      i % 10
+    ],
+    date: '20/01/2025, 10:20',
+    clientContact: '+225 07 63 32 22 32',
+  }));
+
+const makeCaissiers = (names: string[]): Store['caissiers'] =>
+  names.map((name, i) => ({
+    id: `CAISS${String(i + 1).padStart(3, '0')}`,
+    name,
+    contact: `+225 0${5 + (i % 5)} ${10 + i} ${20 + i} ${30 + i} ${40 + i}`,
+  }));
+
 export const stores: Store[] = [
   {
     id: 'MOO1',
     name: 'Angre Djibi 1',
     location: 'Abidjan, Cocody',
+    manager: 'Emmanuel GUIEBI',
+    responsableCaisse: 'Ismael DIOMANDE',
+    caissiers: makeCaissiers([
+      'Kouadio AFFI',
+      'Marie TOURE',
+      'Jean KOFFI',
+      'Awa COULIBALY',
+      'Franck BAMBA',
+      'Salimata OUATTARA',
+      'Yves KONAN',
+    ]),
+    transactions: makeTransactions(10, 0),
   },
   {
     id: 'MOO2',
     name: 'Angre Djibi 2',
     location: 'Abidjan, Yopougon',
+    manager: 'Adama TRAORE',
+    responsableCaisse: 'Fatou KONE',
+    caissiers: makeCaissiers([
+      'Ibrahim SYLLA',
+      'Aminata DIALLO',
+      'Paul YAPI',
+      'Clarisse GNOAN',
+      'Moussa FOFANA',
+    ]),
+    transactions: makeTransactions(8, 100),
   },
   {
     id: 'MOO3',
     name: 'Angre Djibi 3',
     location: 'Abidjan, Plateau',
+    manager: 'Patrick ASSI',
+    responsableCaisse: 'Mariam CISSE',
+    caissiers: makeCaissiers([
+      'Eric KOUAME',
+      'Nadège AHOU',
+      'Seydou BAKAYOKO',
+      'Rosine EHUI',
+    ]),
+    transactions: makeTransactions(9, 200),
   },
   {
     id: 'MOO4',
     name: 'Angre Djibi 4',
     location: 'Abidjan, Marcory',
+    manager: 'Sylvie KOUASSI',
+    responsableCaisse: 'Drissa DEMBELE',
+    caissiers: makeCaissiers([
+      'Gérard LAGO',
+      'Aïcha SANOGO',
+      'Didier KOUA',
+      'Félicité GOUZE',
+      'Mamadou DIABATE',
+      'Solange ADON',
+    ]),
+    transactions: makeTransactions(10, 300),
   },
   {
     id: 'MOO5',
     name: 'Angre Djibi 5',
     location: 'Abidjan, Port-Bouet',
+    manager: 'Rodrigue BROU',
+    responsableCaisse: 'Hawa DOUMBIA',
+    caissiers: makeCaissiers([
+      'Vincent KACOU',
+      'Bintou SANGARE',
+      'Cyrille AHOUSSI',
+    ]),
+    transactions: makeTransactions(8, 400),
   },
   {
     id: 'MOO6',
     name: 'Angre Djibi 6',
     location: 'Abidjan, Abobo',
+    manager: 'Sandrine EHOUO',
+    responsableCaisse: 'Youssouf KONATE',
+    caissiers: makeCaissiers([
+      'Joël AKPA',
+      'Rachelle YEBOUE',
+      'Oumar SIDIBE',
+      'Laetitia BILE',
+      'Karim TOURE',
+    ]),
+    transactions: makeTransactions(9, 500),
   },
   {
     id: 'MOO7',
     name: 'Angre Djibi 7',
     location: 'Abidjan, Yopougon',
+    manager: 'Alain GBAGBO',
+    responsableCaisse: 'Naminata OUATTARA',
+    caissiers: makeCaissiers([
+      'Serge ABOUO',
+      'Fatoumata CAMARA',
+      'Germain DAGO',
+      'Mireille KOUAKOU',
+    ]),
+    transactions: makeTransactions(10, 600),
   },
   {
     id: 'MOO8',
     name: 'Angre Djibi 8',
     location: 'Abidjan, Plateau',
+    manager: 'Laurence GNAGBO',
+    responsableCaisse: 'Brahima COULIBALY',
+    caissiers: makeCaissiers([
+      'Thierry KASSI',
+      'Adjoua MEITE',
+      'Lacina DIARRA',
+      'Élise TANOH',
+      'Souleymane BAMBA',
+    ]),
+    transactions: makeTransactions(8, 700),
   },
   {
     id: 'MOO9',
     name: 'Angre Djibi 9',
     location: 'Abidjan, Marcory',
+    manager: 'Narcisse KOBENAN',
+    responsableCaisse: 'Rokia DIARRASSOUBA',
+    caissiers: makeCaissiers(['Arsène DJRO', 'Kadiatou BERTE', 'Landry ACHI']),
+    transactions: makeTransactions(9, 800),
   },
   {
     id: 'MOO10',
     name: 'Angre Djibi 10',
     location: 'Abidjan, Port-Bouet',
+    manager: 'Clément KOUA',
+    responsableCaisse: 'Ténin SANOGO',
+    caissiers: makeCaissiers([
+      'Fabrice BENIE',
+      'Assétou CISSE',
+      'Hervé DJAHA',
+      'Perpétue GNALY',
+    ]),
+    transactions: makeTransactions(10, 900),
   },
   {
     id: 'MOO11',
     name: 'Angre Djibi 11',
     location: 'Abidjan, Abobo',
+    manager: 'Bertin AKRE',
+    responsableCaisse: 'Djénéba TRAORE',
+    caissiers: makeCaissiers([
+      'Olivier AGUI',
+      'Sali KONE',
+      'Martial ESSAN',
+      'Viviane GBELI',
+      'Issa DIOMANDE',
+      'Christelle ABOU',
+    ]),
+    transactions: makeTransactions(8, 1000),
   },
   {
     id: 'MOO12',
     name: 'Angre Djibi 12',
     location: 'Abidjan, Yopougon',
+    manager: 'Josiane TAPE',
+    responsableCaisse: 'Bakary SORO',
+    caissiers: makeCaissiers([
+      'Prosper NIAMKE',
+      'Fanta KEITA',
+      'Ghislain DELI',
+      'Albertine KOHOU',
+      'Sékou BAGAYOKO',
+    ]),
+    transactions: makeTransactions(9, 1100),
   },
 ];
 

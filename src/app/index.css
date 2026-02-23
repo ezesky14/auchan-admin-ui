@@ -1,4 +1,6 @@
 @import 'tailwindcss';
+@import 'react-day-picker/style.css';
+@import './styles/card.css';
 
 @font-face {
   font-family: 'SanaSans';
@@ -124,4 +126,18 @@ body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+}
+
+.rdp-root {
+  --rdp-accent-color: var(--color-primary);
+  --rdp-accent-background-color: var(--color-pink-custom-2);
+  --rdp-range_middle-background-color: var(--color-pink-custom-2);
+  --rdp-range_middle-color: var(--color-foreground);
+  --rdp-range_start-color: #ffffff;
+  --rdp-range_start-date-background-color: var(--color-primary);
+  --rdp-range_end-color: #ffffff;
+  --rdp-range_end-date-background-color: var(--color-primary);
+  --rdp-selected-border: 2px solid var(--color-primary);
+  --rdp-today-color: var(--color-primary);
+  --rdp-day_button-border-radius: 9999px;
 }
