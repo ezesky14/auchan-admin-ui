@@ -4,12 +4,14 @@ import { Button } from '../../button';
 import Image from 'next/image';
 import { MapPinIcon } from '@phosphor-icons/react';
 import { useRouter } from 'next/navigation';
+import { cn } from '@/lib/utils';
 
 type Props = {
   store: Store;
+  className?: string;
 };
 
-export default function StoreItem({ store }: Props) {
+export default function StoreItem({ store, className }: Props) {
   const { name, location, id } = store;
   const router = useRouter();
 
@@ -18,7 +20,12 @@ export default function StoreItem({ store }: Props) {
   };
 
   return (
-    <div className="group relative flex h-[200px] w-[250px] flex-col overflow-hidden rounded-4xl bg-white p-6 transition-all duration-300 hover:cursor-pointer hover:bg-[radial-gradient(104.5%_149.38%_at_-2.6%_-7.25%,#FFBDC4_0%,#E0001A_49.04%)] hover:text-white">
+    <div
+      className={cn(
+        'group relative z-0 flex h-[200px] w-[250px] flex-col overflow-hidden rounded-4xl bg-white p-6 transition-all duration-300 hover:cursor-pointer hover:bg-[radial-gradient(104.5%_149.38%_at_-2.6%_-7.25%,#FFBDC4_0%,#E0001A_49.04%)] hover:text-white',
+        className,
+      )}
+    >
       <div className="relative z-20 flex items-center justify-between">
         <div className="group-hover:bg-pink-custom rounded-lg bg-gray-200 p-1.5">
           <Image
