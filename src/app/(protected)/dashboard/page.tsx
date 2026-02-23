@@ -8,7 +8,7 @@ import TransactionTable from '@/app/components/transactions/transaction-table/tr
 export default function DashboardPage() {
   return (
     <section>
-      <div className="mt-8 flex flex-col gap-6 lg:flex-row">
+      <div className="mt-8 flex flex-col gap-6 py-6 lg:flex-row">
         <BalanceOverview balanceDetails={{ amount: '9 231 000' }} />
         <div className="bg-pink-custom-2 flex w-full flex-col gap-2 rounded-3xl p-4">
           <div className="flex w-full items-center gap-2">
