@@ -21,7 +21,7 @@ function DataTablePagination<TData>({
 
   return (
     <div className="flex items-center justify-between px-2 py-2">
-      <p className="text-sm text-muted-foreground">
+      <p className="text-muted-foreground text-sm">
         Page {pageIndex + 1} sur {pageCount}
       </p>
 
@@ -67,7 +67,7 @@ function PaginationButton({
   return (
     <button
       className={cn(
-        'inline-flex h-8 w-8 cursor-pointer items-center justify-center rounded-md border border-border text-muted-foreground transition-colors hover:bg-muted disabled:pointer-events-none disabled:opacity-50',
+        'border-border text-muted-foreground hover:bg-muted inline-flex h-8 w-8 cursor-pointer items-center justify-center rounded-md border transition-colors disabled:pointer-events-none disabled:opacity-50',
         className,
       )}
       {...props}

@@ -6,7 +6,7 @@ import { Input } from '../../components/input';
 import { Button } from '../../components/button';
 import Link from 'next/link';
 import { useState } from 'react';
-import { useRouter } from "next/navigation"
+import { useRouter } from 'next/navigation';
 
 export default function Login() {
   const [formValues, setFormValues] = useState({

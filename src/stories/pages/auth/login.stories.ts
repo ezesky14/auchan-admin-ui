@@ -7,6 +7,9 @@ const meta = {
   component: Login,
   parameters: {
     layout: 'fullscreen',
+    nextjs: {
+      appDirectory: true,
+    },
   },
   tags: ['autodocs'],
 } satisfies Meta<typeof Login>;

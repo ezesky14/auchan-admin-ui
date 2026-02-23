@@ -1,26 +1,30 @@
 'use client';
 import { cva, type VariantProps } from 'class-variance-authority';
 
-const buttonVariants = cva('flex items-center justify-center rounded-full cursor-pointer', {
-  variants: {
-    variant: {
-      default: 'text-white bg-primary',
-      link: 'text-primary text-xs',
-      ghost: 'text-primary px-2 py-2',
-      outline: 'text-primary bg-transparent px-2 py-2 border border-primary border-2 font-medium',
+const buttonVariants = cva(
+  'flex items-center justify-center rounded-full cursor-pointer',
+  {
+    variants: {
+      variant: {
+        default: 'text-white bg-primary',
+        link: 'text-primary text-xs',
+        ghost: 'text-primary px-2 py-2',
+        outline:
+          'text-primary bg-transparent px-2 py-2 border border-primary border-2 font-medium',
+      },
+      size: {
+        default: 'h-10 px-4',
+        sm: 'h-9 px-3',
+        lg: 'h-11 px-8',
+        icon: 'size-9 px-4',
+      },
     },
-    size: {
-      default: 'h-10 px-4',
-      sm: 'h-9 px-3',
-      lg: 'h-11 px-8',
-      icon: 'size-9 px-4',
+    defaultVariants: {
+      variant: 'default',
+      size: 'default',
     },
   },
-  defaultVariants: {
-    variant: 'default',
-    size: 'default',
-  },
-});
+);
 
 const Button = ({
   children,
