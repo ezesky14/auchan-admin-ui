@@ -115,7 +115,6 @@ Le build statique est genere dans le dossier `storybook-static/`.
 | `test`            | `pnpm test`            | Lance les tests unitaires (Vitest)             |
 | `test:watch`      | `pnpm test:watch`      | Lance les tests en mode watch                  |
 | `test:ui`         | `pnpm test:ui`         | Lance les tests avec l'interface Vitest UI     |
-| `test:coverage`   | `pnpm test:coverage`   | Lance les tests avec rapport de couverture     |
 | `test:storybook`  | `pnpm test:storybook`  | Lance les tests Storybook                      |
 | `storybook`       | `pnpm storybook`       | Lance Storybook sur le port 6006               |
 | `build-storybook` | `pnpm build-storybook` | Genere un build statique de Storybook          |
