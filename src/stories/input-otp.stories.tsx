@@ -6,11 +6,8 @@ import {
 } from '@/app/components/input-otp';
 import { REGEXP_ONLY_DIGITS_AND_CHARS } from 'input-otp';
 
-/**
- * Composant de mot de passe à usage unique accessible avec fonction copier-coller.
- */
 const meta = {
-  title: 'ui/InputOTP',
+  title: 'Composants/Composants de base/InputOTP',
   component: InputOTP,
   tags: ['autodocs'],
   argTypes: {},
