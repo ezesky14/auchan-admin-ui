@@ -18,7 +18,6 @@
     "test": "vitest run --project unit",
     "test:watch": "vitest --project unit",
     "test:ui": "vitest --ui --project unit",
-    "test:coverage": "vitest run --coverage --project unit",
     "test:storybook": "vitest run --project storybook",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
@@ -69,7 +68,6 @@
     "@types/react-dom": "^19",
     "@vitejs/plugin-react": "^5.1.4",
     "@vitest/browser-playwright": "^4.0.18",
-    "@vitest/coverage-v8": "^4.0.18",
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",

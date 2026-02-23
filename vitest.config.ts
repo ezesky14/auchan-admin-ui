@@ -16,19 +16,6 @@ const dirname =
 
 export default defineConfig({
   test: {
-    coverage: {
-      provider: 'v8',
-      reporter: ['text', 'json', 'html'],
-      exclude: [
-        'node_modules/',
-        'src/test/',
-        '**/*.d.ts',
-        '**/*.config.*',
-        '**/*.stories.*',
-        '.storybook/',
-        '.next/',
-      ],
-    },
     projects: [
       {
         extends: true,
