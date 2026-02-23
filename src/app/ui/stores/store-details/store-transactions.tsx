@@ -7,11 +7,7 @@ import { Button } from '@/app/components/button';
 import { DateRangePicker } from '@/app/components/date-range-picker';
 import { Store } from '@/app/types/store';
 import { storeTransactionColumns } from './store-transaction-columns';
-import {
-  MagnifyingGlassIcon,
-  ArrowsClockwiseIcon,
-  ExportIcon,
-} from '@phosphor-icons/react';
+import { ArrowsClockwiseIcon } from '@phosphor-icons/react';
 import { cn } from '@/lib/utils';
 import { InputSearch } from '@/app/components/input-search';
 

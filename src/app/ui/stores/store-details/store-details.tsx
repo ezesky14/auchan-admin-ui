@@ -22,8 +22,6 @@ export default function StoreDetails({ store }: { store: Store }) {
     ];
   }, [store.transactions]);
 
-  const total = segments.reduce((sum, s) => sum + s.value, 0);
-
   return (
     <div>
       <div className="flex items-center gap-2 py-4">
